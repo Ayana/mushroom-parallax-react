@@ -8,7 +8,39 @@
 @import "variables";
 @import "mixin";
 
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC700&display=swap");
+
+#root {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  width: 100%;
+  height: 100vh; //fallback option
+  height: calc(var(--vh, 1vh) * 100);
+}
+.button {
+  font-family: "Amatic SC", cursive;
+  background: #e22c2c;
+  color: white;
+  margin: auto;
+  position: absolute;
+  border-radius: 5px;
+  width: 300px;
+  height: 80px;
+  font-size: 2.4rem;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+  }
+}
 .parallax-container {
+  display: none;
   position: relative;
   width: 100%;
   height: 100vh; //fallback option
@@ -18,51 +50,73 @@
     background-repeat: no-repeat;
     position: absolute;
   }
-  .layer5 {
-    background-image: url(../images/layer5.png);
-    width: 100%;
-    height: 100%;
-  }
-  .layer4 {
-    background-image: url(../images/layer4.png);
-    background-size: contain;
-    width: 70%;
-    height: 40%;
+  .layer1 {
+    background-image: url(../images/layer1.png);
+    background-size: cover;
+    background-position: center;
+    width: 140%;
+    height: 50%;
     margin: auto;
     left: 0;
-    top: 0;
     right: 0;
-    bottom: 20%;
-  }
-  .layer3 {
-    background-image: url(../images/layer3.png);
-    background-size: contain;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
+    bottom: -25%;
   }
   .layer2 {
     background-image: url(../images/layer2.png);
     background-size: contain;
     background-position: bottom;
+    width: 120px;
+    height: 150px;
+    left: 15%;
+    bottom: 10%;
+  }
+  .layer3 {
+    background-image: url(../images/layer3.png);
+    background-size: contain;
+    background-position: center;
+    width: 8%;
+    height: 15%;
+    right: 10%;
+    bottom: 10%;
+  }
+  .layer4 {
+    //logo
+    background-image: url(../images/layer4.png);
+    background-size: contain;
+    background-position: center;
     width: 40%;
-    height: 100%;
+    height: 40%;
     margin: auto;
     left: 0;
-    right: 10%;
-    bottom: 4%;
+    top: 15%;
+    right: 0;
   }
-  .layer1 {
-    background-image: url(../images/layer1.png);
+  .layer5 {
+    background-image: url(../images/layer5.png);
+    background-position: center;
     background-size: contain;
-    background-position: bottom;
-    width: 120%;
-    height: 100%;
+    width: 100%;
+    height: 400px;
     margin: auto;
     left: 0;
     right: 0;
-    bottom: -5%;
+    bottom: 12%;
+  }
+  .layer6 {
+    background-image: url(../images/layer6.png);
+    background-size: cover;
+    background-position: top;
+    width: 130%;
+    height: 36%;
+    margin: auto;
+    left: 0;
+    bottom: -4%;
+    right: 0;
+  }
+  .layer7 {
+    background-image: url(../images/layer7.png);
+    background-size: cover;
+    width: 120%;
+    height: 110%;
   }
 }
