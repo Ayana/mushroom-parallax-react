@@ -1,0 +1,68 @@
+@charset 'utf-8';
+
+// Reset
+@import "normalize-scss";
+@import "./_reset.scss";
+
+// Initial setting
+@import "variables";
+@import "mixin";
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; //fallback option
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  .parallax-layer {
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .layer5 {
+    background-image: url(../images/layer5.png);
+    width: 100%;
+    height: 100%;
+  }
+  .layer4 {
+    background-image: url(../images/layer4.png);
+    background-size: contain;
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 20%;
+  }
+  .layer3 {
+    background-image: url(../images/layer3.png);
+    background-size: contain;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  .layer2 {
+    background-image: url(../images/layer2.png);
+    background-size: contain;
+    background-position: bottom;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 10%;
+    bottom: 4%;
+  }
+  .layer1 {
+    background-image: url(../images/layer1.png);
+    background-size: contain;
+    background-position: bottom;
+    width: 120%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -5%;
+  }
+}

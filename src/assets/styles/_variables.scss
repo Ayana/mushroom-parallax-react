@@ -1,0 +1,33 @@
+/* --------------------------------------------
+Valuables
+-------------------------------------------- */
+
+// Typography
+$font-sans-serif: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Noto Sans JP', sans-serif;
+$font-serif: 'EB Garamond', 'Noto Serif JP', serif;
+
+// Media Query Breakpoint
+$xs: 320px;
+$sm: 414px;
+$md: 668px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1312px;
+
+// Color
+$color-primary: #313f3f;
+$color-secondary: #f7a046;
+$color-accent: #92693c;
+
+$color-black: #222;
+$color-white: #f8f8f8;
+$color-green: #222b2b;
+$color-dark: #31393f;
+$color-gray: lighten($color-black, 40%);
+$color-light-gray: lighten($color-black, 60%);
+$color-dark-gray: lighten($color-black, 10%);
+
+$color-font: #333;
+$color-bg: #dcdcdb;
+$color-link: #637e7e;
