@@ -58,7 +58,7 @@ html {
   height: calc(var(--vh, 1vh) * 100);
 }
 .button {
-  font-family: "Amatic SC", cursive;
+  // font-family: "Amatic SC", cursive;
   background: #e22c2c;
   color: white;
   margin: auto;
@@ -66,7 +66,7 @@ html {
   border-radius: 5px;
   width: 300px;
   height: 80px;
-  font-size: 2.4rem;
+  font-size: 2rem;
   left: 0;
   top: 0;
   right: 0;
