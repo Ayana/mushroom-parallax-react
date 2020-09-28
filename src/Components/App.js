@@ -28,6 +28,7 @@ function App() {
 
   const [x, setX] = useState("null")
   const [y, setY] = useState("null")
+  const [z, setZ] = useState("null")
   useEffect(() => {
     const centerX = window.innerWidth / 2
     const centerY = window.innerWidth / 2
@@ -56,6 +57,7 @@ function App() {
                 setX(gamma)
                 setY(beta)
                 if (beta > 0 && beta < 90) {
+                  setZ("<90")
                   layer1.style.transform = `translate3d(${-gamma * 1.5}px,${-beta * 1.2}px,0px)`
                   layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
                   layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
@@ -64,6 +66,7 @@ function App() {
                   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
                 } else {
+                  setZ("else")
                   layer1.style.transform = `translate3d(0px,0px,0px)`
                   layer2.style.transform = `translate3d(0px,0px,0px)`
                   layer3.style.transform = `translate3d(0px,0px,0px)`
@@ -98,7 +101,7 @@ function App() {
     <>
       <button className="button">CLICK TO SHOW</button>
       <div className="note">
-        gumma:{x} / beta:{y}
+        gumma:{x} / beta:{y} / z:{z}
       </div>
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
