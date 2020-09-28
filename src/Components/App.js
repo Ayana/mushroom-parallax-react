@@ -54,10 +54,11 @@ function App() {
               window.addEventListener("deviceorientation", (e) => {
                 const gamma = Math.floor(e.gamma)
                 const beta = Math.floor(e.beta)
+                const alpha = Math.floor(e.alpha)
                 setX(gamma)
                 setY(beta)
-                if (beta > -70 && beta < 70) {
-                  setZ("<90")
+                setZ(alpha)
+                if (beta > -85 && beta < 85) {
                   layer1.style.transform = `translate3d(${-gamma * 1.5}px,${-beta * 1.2}px,0px)`
                   layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
                   layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
@@ -66,20 +67,6 @@ function App() {
                   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
                 } else {
-                  setZ("else")
-                  // layer1.style.transform = `translate3d(${-90 * 1.5}px,${-90 * 1.2}px,0px)`
-                  // layer2.style.transform = `translate3d(${-90 * 1.3}px,${-90 * 1.1}px,0px)`
-                  // layer3.style.transform = `translate3d(${-90 * 1.2}px,${-90 * 1.05}px,0px)`
-                  // layer4.style.transform = `translate3d(${-90 * 1.04}px,${-90 * 1.02}px,0px)`
-                  // layer5.style.transform = `translate3d(${-90 * 0.8}px,${-90 * 0.9}px,0px)`
-                  // layer6.style.transform = `translate3d(${-90 * 0.6}px,${-90 * 0.5}px,0px)`
-                  // layer7.style.transform = `translate3d(${-90 * 0.5}px,${-90 * 0.3}px,0px)`
-                  // layer1.style.transform = `translate3d(0px,0px,0px)`
-                  // layer2.style.transform = `translate3d(0px,0px,0px)`
-                  // layer3.style.transform = `translate3d(0px,0px,0px)`
-                  // layer4.style.transform = `translate3d(0px,0px,0px)`
-                  // layer5.style.transform = `translate3d(0px,0px,0px)`
-                  // layer6.style.transform = `translate3d(0px,0px,0px)`
                 }
               })
             }
