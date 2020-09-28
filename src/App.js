@@ -51,8 +51,10 @@ function App() {
               button.style.display = "none"
               container.style.display = "block"
               window.addEventListener("deviceorientation", (e) => {
-                const x = e.gamma - centerX
-                const y = e.beta - centerY
+                const x = Math.floor(e.gamma)
+                const y = Math.floor(e.beta)
+                // const x = Math.floor(e.gamma - centerX)
+                // const y = Math.floor(e.beta - centerY)
                 setX(x)
                 setY(y)
                 layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,${x + y}px`
