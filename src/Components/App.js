@@ -58,7 +58,7 @@ function App() {
                 setX(gamma)
                 setY(beta)
                 setZ(alpha)
-                if (beta > -85 && beta < 85) {
+                if (beta > -90 && beta < 90) {
                   layer1.style.transform = `translate3d(${-gamma * 1.5}px,${-beta * 1.2}px,0px)`
                   layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
                   layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
