@@ -52,9 +52,12 @@ function App() {
               button.style.display = "none"
               container.style.display = "block"
               window.addEventListener("deviceorientation", (e) => {
-                const gamma = Math.floor(e.gamma)
-                const beta = Math.floor(e.beta)
-                const alpha = Math.floor(e.alpha)
+                // const gamma = Math.floor(e.gamma)
+                // const beta = Math.floor(e.beta)
+                // const alpha = Math.floor(e.alpha)
+                const gamma = e.gamma
+                const beta = e.beta
+                const alpha = e.alpha
                 setX(gamma)
                 setY(beta)
                 setZ(alpha)
@@ -66,14 +69,6 @@ function App() {
                   layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
                   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
-                } else if (beta > 85 && beta < 95) {
-                  layer1.style.transformY = `translateY(${-beta * 1.2}px)`
-                  layer2.style.transformY = `translateY(${-beta * 1.1}px)`
-                  layer3.style.transformY = `translateY(${-beta * 1.05}px)`
-                  layer4.style.transformY = `translateY(${-beta * 1.02}px)`
-                  layer5.style.transformY = `translateY(${-beta * 0.9}px)`
-                  layer6.style.transformY = `translateY(${-beta * 0.5}px)`
-                  layer7.style.transformY = `translateY(${-beta * 0.3}px)`
                 } else {
                   layer1.style.transform = `translate3d(${gamma * 1.4}px,${-beta * 1.2}px,0px)`
                   layer2.style.transform = `translate3d(${gamma * 1.3}px,${-beta * 1.1}px,0px)`
