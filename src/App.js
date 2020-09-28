@@ -59,13 +59,15 @@ function App() {
                 setX(x)
                 setY(y)
                 setZ(x + y)
-                layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,${x + y}px`
-                layer2.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.24}px,${x + y}px`
-                layer3.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.15}px,${x + y}px`
-                layer4.style.transform = `translate3d(${-x * 0.24}px,${-y * 0.12}px,${x + y}px`
-                layer5.style.transform = `translate3d(${-x * 0.27}px,${-y * 0.09}px,${x + y}px`
-                layer6.style.transform = `translate3d(${-x * 0.12}px,${-y * 0.06}px,${x + y}px`
-                layer7.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,${x + y}px`
+                if (y > 0 && y < 90) {
+                  layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,0px`
+                  layer2.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.24}px,0px`
+                  layer3.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.15}px,0px`
+                  layer4.style.transform = `translate3d(${-x * 0.24}px,${-y * 0.12}px,0px`
+                  layer5.style.transform = `translate3d(${-x * 0.27}px,${-y * 0.09}px,0px`
+                  layer6.style.transform = `translate3d(${-x * 0.12}px,${-y * 0.06}px,0px`
+                  layer7.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,0px`
+                }
               })
             }
           })
@@ -77,13 +79,13 @@ function App() {
         document.body.addEventListener("mousemove", (e) => {
           const x = e.clientX - centerX
           const y = e.clientY - centerY
-          layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,${x + y}px`
-          layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,${x + y}px`
-          layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,${x + y}px`
-          layer4.style.transform = `translate3d(${-x * 0.08}px,${-y * 0.04}px,${x + y}px`
-          layer5.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,${x + y}px`
-          layer6.style.transform = `translate3d(${-x * 0.04}px,${-y * 0.02}px,${x + y}px`
-          layer7.style.transform = `translate3d(${-x * 0.03}px,${-y * 0.01}px,${x + y}px`
+          layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,0px`
+          layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,0px`
+          layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,0px`
+          layer4.style.transform = `translate3d(${-x * 0.08}px,${-y * 0.04}px,0px`
+          layer5.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,0px`
+          layer6.style.transform = `translate3d(${-x * 0.04}px,${-y * 0.02}px,0px`
+          layer7.style.transform = `translate3d(${-x * 0.03}px,${-y * 0.01}px,0px`
         })
       }
     }
@@ -93,7 +95,7 @@ function App() {
     <>
       <button className="button">CLICK TO SHOW</button>
       <div className="note">
-        x:{x} / y:{y} / z:{z}
+        gumma:{x} / beta:{y} / total:{z}
       </div>
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
