@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import "./assets/styles/App.scss"
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
     }
   })
 
-  // const [x, setX] = useState("null")
-  // const [y, setY] = useState("null")
+  const [x, setX] = useState("null")
+  const [y, setY] = useState("null")
   useEffect(() => {
     const centerX = window.innerWidth / 2
     const centerY = window.innerWidth / 2
@@ -53,13 +53,15 @@ function App() {
               window.addEventListener("deviceorientation", (e) => {
                 const x = e.gamma - centerX
                 const y = e.beta - centerY
-                layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,${x + y}px`
-                layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,${x + y}px`
-                layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,${x + y}px`
-                layer4.style.transform = `translate3d(${-x * 0.08}px,${-y * 0.04}px,${x + y}px`
-                layer5.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,${x + y}px`
-                layer6.style.transform = `translate3d(${-x * 0.04}px,${-y * 0.02}px,${x + y}px`
-                layer7.style.transform = `translate3d(${-x * 0.03}px,${-y * 0.01}px,${x + y}px`
+                setX(x)
+                setY(y)
+                layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,${x + y}px`
+                layer2.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.24}px,${x + y}px`
+                layer3.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.15}px,${x + y}px`
+                layer4.style.transform = `translate3d(${-x * 0.24}px,${-y * 0.12}px,${x + y}px`
+                layer5.style.transform = `translate3d(${-x * 0.27}px,${-y * 0.09}px,${x + y}px`
+                layer6.style.transform = `translate3d(${-x * 0.12}px,${-y * 0.06}px,${x + y}px`
+                layer7.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,${x + y}px`
               })
             }
           })
@@ -71,8 +73,6 @@ function App() {
         document.body.addEventListener("mousemove", (e) => {
           const x = e.clientX - centerX
           const y = e.clientY - centerY
-          // setX(x)
-          // setY(y)
           layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,${x + y}px`
           layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,${x + y}px`
           layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,${x + y}px`
@@ -88,9 +88,9 @@ function App() {
   return (
     <>
       <button className="button">CLICK TO SHOW</button>
-      {/* <div className="note">
+      <div className="note">
         {x} / {y}
-      </div> */}
+      </div>
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
         <div className="parallax-layer layer6"></div>
