@@ -58,16 +58,16 @@ function App() {
                 setX(gamma)
                 setY(beta)
                 setZ(alpha)
-                if (beta > -90 && beta < 90) {
-                  layer1.style.transform = `translate3d(${-gamma * 1.5}px,${-beta * 1.2}px,0px)`
-                  layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
-                  layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
-                  layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
-                  layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
-                  layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
-                  layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
-                } else {
-                }
+                // if (beta > -90 && beta < 90) {
+                layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
+                layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
+                layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
+                layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
+                layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
+                layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
+                layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
+                // } else {
+                // }
               })
             }
           })

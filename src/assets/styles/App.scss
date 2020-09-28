@@ -93,12 +93,13 @@ html {
     background-image: url(../images/layer1.png);
     background-size: cover;
     background-position: center;
-    width: 140%;
+    width: 150%;
     height: 40%;
     margin: auto;
-    left: -15%;
+    left: -25%;
     bottom: -20%;
     @include medium {
+      width: 120%;
       height: 50%;
       bottom: -18%;
     }
