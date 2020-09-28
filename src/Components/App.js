@@ -52,12 +52,9 @@ function App() {
               button.style.display = "none"
               container.style.display = "block"
               window.addEventListener("deviceorientation", (e) => {
-                // const gamma = Math.floor(e.gamma)
-                // const beta = Math.floor(e.beta)
-                // const alpha = Math.floor(e.alpha)
-                const gamma = e.gamma
-                const beta = e.beta
-                const alpha = e.alpha
+                const gamma = Math.floor(e.gamma) + 90
+                const beta = Math.floor(e.beta) + 90
+                const alpha = Math.floor(e.alpha) + 90
                 setX(gamma)
                 setY(beta)
                 setZ(alpha)
