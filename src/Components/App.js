@@ -52,29 +52,41 @@ function App() {
               button.style.display = "none"
               container.style.display = "block"
               window.addEventListener("deviceorientation", (e) => {
-                const gamma = Math.floor(e.gamma) + 90
-                const beta = Math.floor(e.beta) + 90
-                const alpha = Math.floor(e.alpha) + 90
+                const gamma = Math.floor(e.gamma)
+                const beta = Math.floor(e.beta)
+                const alpha = Math.floor(e.alpha)
                 setX(gamma)
                 setY(beta)
                 setZ(alpha)
-                if (beta > -90 && beta < 90) {
-                  layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
-                  layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
-                  layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
-                  layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
-                  layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
-                  layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
-                  layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
-                } else {
-                  layer1.style.transform = `translate3d(${gamma * 1.4}px,${-beta * 1.2}px,0px)`
-                  layer2.style.transform = `translate3d(${gamma * 1.3}px,${-beta * 1.1}px,0px)`
-                  layer3.style.transform = `translate3d(${gamma * 1.2}px,${-beta * 1.05}px,0px)`
-                  layer4.style.transform = `translate3d(${gamma * 1.04}px,${-beta * 1.02}px,0px)`
-                  layer5.style.transform = `translate3d(${gamma * 0.8}px,${-beta * 0.9}px,0px)`
-                  layer6.style.transform = `translate3d(${gamma * 0.6}px,${-beta * 0.5}px,0px)`
-                  layer7.style.transform = `translate3d(${gamma * 0.5}px,${-beta * 0.3}px,0px)`
+                if (beta > 90) {
+                  const gamma = Math.floor(e.gamma) + 180
+                  setX(gamma)
                 }
+                layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
+                layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
+                layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
+                layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
+                layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
+                layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
+                layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
+
+                // if (beta > -90 && beta < 90) {
+                //   layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
+                //   layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
+                //   layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
+                //   layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
+                //   layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
+                //   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
+                //   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
+                // } else {
+                //   layer1.style.transform = `translate3d(${gamma * 1.4}px,${-beta * 1.2}px,0px)`
+                //   layer2.style.transform = `translate3d(${gamma * 1.3}px,${-beta * 1.1}px,0px)`
+                //   layer3.style.transform = `translate3d(${gamma * 1.2}px,${-beta * 1.05}px,0px)`
+                //   layer4.style.transform = `translate3d(${gamma * 1.04}px,${-beta * 1.02}px,0px)`
+                //   layer5.style.transform = `translate3d(${gamma * 0.8}px,${-beta * 0.9}px,0px)`
+                //   layer6.style.transform = `translate3d(${gamma * 0.6}px,${-beta * 0.5}px,0px)`
+                //   layer7.style.transform = `translate3d(${gamma * 0.5}px,${-beta * 0.3}px,0px)`
+                // }
               })
             }
           })
@@ -102,7 +114,7 @@ function App() {
     <>
       <button className="button">CLICK TO SHOW</button>
       <div className="note">
-        gumma:{x} / beta:{y} / z:{z}
+        gamma:{x} / beta:{y} / z:{z}
       </div>
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
