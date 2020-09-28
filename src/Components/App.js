@@ -67,12 +67,12 @@ function App() {
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
                 } else {
                   setZ("else")
-                  layer1.style.transform = `translate3d(0px,0px,0px)`
-                  layer2.style.transform = `translate3d(0px,0px,0px)`
-                  layer3.style.transform = `translate3d(0px,0px,0px)`
-                  layer4.style.transform = `translate3d(0px,0px,0px)`
-                  layer5.style.transform = `translate3d(0px,0px,0px)`
-                  layer6.style.transform = `translate3d(0px,0px,0px)`
+                  // layer1.style.transform = `translate3d(0px,0px,0px)`
+                  // layer2.style.transform = `translate3d(0px,0px,0px)`
+                  // layer3.style.transform = `translate3d(0px,0px,0px)`
+                  // layer4.style.transform = `translate3d(0px,0px,0px)`
+                  // layer5.style.transform = `translate3d(0px,0px,0px)`
+                  // layer6.style.transform = `translate3d(0px,0px,0px)`
                 }
               })
             }
