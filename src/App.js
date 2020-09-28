@@ -28,6 +28,7 @@ function App() {
 
   const [x, setX] = useState("null")
   const [y, setY] = useState("null")
+  const [z, setZ] = useState("null")
   useEffect(() => {
     const centerX = window.innerWidth / 2
     const centerY = window.innerWidth / 2
@@ -57,6 +58,7 @@ function App() {
                 // const y = Math.floor(e.beta - centerY)
                 setX(x)
                 setY(y)
+                setZ(x + y)
                 layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,${x + y}px`
                 layer2.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.24}px,${x + y}px`
                 layer3.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.15}px,${x + y}px`
@@ -91,7 +93,7 @@ function App() {
     <>
       <button className="button">CLICK TO SHOW</button>
       <div className="note">
-        {x} / {y}
+        x:{x} / y:{y} / z:{z}
       </div>
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
