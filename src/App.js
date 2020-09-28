@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import "./assets/styles/App.scss"
 
 function App() {
@@ -26,9 +26,8 @@ function App() {
     }
   })
 
-  const [x, setX] = useState("null")
-  const [y, setY] = useState("null")
-  const [z, setZ] = useState("null")
+  // const [x, setX] = useState("null")
+  // const [y, setY] = useState("null")
   useEffect(() => {
     const centerX = window.innerWidth / 2
     const centerY = window.innerWidth / 2
@@ -54,19 +53,16 @@ function App() {
               window.addEventListener("deviceorientation", (e) => {
                 const x = Math.floor(e.gamma)
                 const y = Math.floor(e.beta)
-                // const x = Math.floor(e.gamma - centerX)
-                // const y = Math.floor(e.beta - centerY)
-                setX(x)
-                setY(y)
-                setZ(x + y)
+                // setX(x)
+                // setY(y)
                 if (y > 0 && y < 90) {
-                  layer1.style.transform = `translate3d(${-x * 0.75}px,${-y * 0.24}px,0px`
-                  layer2.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.24}px,0px`
-                  layer3.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.15}px,0px`
-                  layer4.style.transform = `translate3d(${-x * 0.24}px,${-y * 0.12}px,0px`
-                  layer5.style.transform = `translate3d(${-x * 0.27}px,${-y * 0.09}px,0px`
-                  layer6.style.transform = `translate3d(${-x * 0.12}px,${-y * 0.06}px,0px`
-                  layer7.style.transform = `translate3d(${-x * 0.09}px,${-y * 0.03}px,0px`
+                  layer1.style.transform = `translate3d(${-x * 1.75}px,${-y * 1.24}px,0px`
+                  layer2.style.transform = `translate3d(${-x * 1.6}px,${-y * 1.24}px,0px`
+                  layer3.style.transform = `translate3d(${-x * 1.3}px,${-y * 1.15}px,0px`
+                  layer4.style.transform = `translate3d(${-x * 1.24}px,${-y * 1.12}px,0px`
+                  layer5.style.transform = `translate3d(${-x * 1.27}px,${-y * 1.09}px,0px`
+                  layer6.style.transform = `translate3d(${-x * 1.12}px,${-y * 1.06}px,0px`
+                  layer7.style.transform = `translate3d(${-x * 1.09}px,${-y * 1.03}px,0px`
                 }
               })
             }
@@ -94,9 +90,9 @@ function App() {
   return (
     <>
       <button className="button">CLICK TO SHOW</button>
-      <div className="note">
-        gumma:{x} / beta:{y} / total:{z}
-      </div>
+      {/* <div className="note">
+        gumma:{x} / beta:{y}
+      </div> */}
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
         <div className="parallax-layer layer6"></div>
