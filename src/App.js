@@ -26,9 +26,11 @@ function App() {
     }
   })
 
-  // const [x, setX] = useState("null")
-  // const [y, setY] = useState("null")
+  const [x, setX] = useState("null")
+  const [y, setY] = useState("null")
   useEffect(() => {
+    const centerX = window.innerWidth / 2
+    const centerY = window.innerWidth / 2
     const button = document.querySelector(".button")
     const container = document.querySelector(".parallax-container")
     const layer1 = document.querySelector(".layer1")
@@ -60,11 +62,11 @@ function App() {
         container.style.display = "block"
         // handle regular non iOS 13+ devices
         document.body.addEventListener("mousemove", (e) => {
-          const x = e.clientX
-          const y = e.clientY
-          // setX(x)
-          // setY(y)
-          layer1.style.transform = `translate3d(${-x * 0.3}px,${-y * 0.08}px,${x + y}px`
+          const x = e.clientX - centerX
+          const y = e.clientY - centerY
+          setX(x)
+          setY(y)
+          layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,${x + y}px`
           layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,${x + y}px`
           layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,${x + y}px`
           layer4.style.transform = `translate3d(${-x * 0.08}px,${-y * 0.04}px,${x + y}px`

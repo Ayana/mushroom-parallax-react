@@ -54,12 +54,11 @@
     background-image: url(../images/layer1.png);
     background-size: cover;
     background-position: center;
-    width: 140%;
+    width: 130%;
     height: 50%;
     margin: auto;
-    left: 0;
-    right: 0;
-    bottom: -25%;
+    left: -15%;
+    bottom: -18%;
   }
   .layer2 {
     background-image: url(../images/layer2.png);
@@ -109,8 +108,8 @@
     width: 130%;
     height: 36%;
     margin: auto;
-    left: 0;
-    bottom: -4%;
+    left: -15%;
+    bottom: -3%;
     right: 0;
   }
   .layer7 {
@@ -118,5 +117,7 @@
     background-size: cover;
     width: 120%;
     height: 110%;
+    left: -10%;
+    top: -10%;
   }
 }
