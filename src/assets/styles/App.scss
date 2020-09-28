@@ -55,19 +55,28 @@
     background-size: cover;
     background-position: center;
     width: 130%;
-    height: 50%;
+    height: 40%;
     margin: auto;
     left: -15%;
-    bottom: -18%;
+    bottom: -15%;
+    @include medium {
+      height: 50%;
+      bottom: -18%;
+    }
   }
   .layer2 {
     background-image: url(../images/layer2.png);
     background-size: contain;
     background-position: bottom;
-    width: 120px;
-    height: 150px;
+    width: 80px;
+    height: 100px;
     left: 15%;
-    bottom: 10%;
+    bottom: 7%;
+    @include medium {
+      width: 120px;
+      height: 150px;
+      bottom: 10%;
+    }
   }
   .layer3 {
     background-image: url(../images/layer3.png);
@@ -76,30 +85,41 @@
     width: 8%;
     height: 15%;
     right: 10%;
-    bottom: 10%;
+    bottom: 6%;
+    @include medium {
+      bottom: 10%;
+    }
   }
   .layer4 {
     //logo
     background-image: url(../images/layer4.png);
     background-size: contain;
     background-position: center;
-    width: 40%;
+    width: 70%;
     height: 40%;
     margin: auto;
     left: 0;
     top: 15%;
     right: 0;
+    @include medium {
+      width: 40%;
+    }
   }
   .layer5 {
     background-image: url(../images/layer5.png);
     background-position: center;
     background-size: contain;
-    width: 100%;
-    height: 400px;
+    width: 170%;
+    height: 250px;
     margin: auto;
-    left: 0;
+    left: -35%;
     right: 0;
     bottom: 12%;
+    @include medium {
+      left: 0;
+      width: 150%;
+      height: 400px;
+    }
   }
   .layer6 {
     background-image: url(../images/layer6.png);
