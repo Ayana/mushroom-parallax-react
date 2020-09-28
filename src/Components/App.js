@@ -50,20 +50,22 @@ function App() {
             if (permissionState === "granted") {
               button.style.display = "none"
               container.style.display = "block"
+              window.screen.orientation.lock()
+              window.screen.lockOrientation("orientation")
               window.addEventListener("deviceorientation", (e) => {
                 const x = Math.floor(e.gamma)
                 const y = Math.floor(e.beta)
                 // setX(x)
                 // setY(y)
-                // if (y > 0 && y < 90) {
-                layer1.style.transform = `translate3d(${-x * 1.5}px,${-y * 1.2}px,0px`
-                layer2.style.transform = `translate3d(${-x * 1.3}px,${-y * 1.1}px,0px`
-                layer3.style.transform = `translate3d(${-x * 1.2}px,${-y * 1.05}px,0px`
-                layer4.style.transform = `translate3d(${-x * 1.04}px,${-y * 1.02}px,0px`
-                layer5.style.transform = `translate3d(${-x * 0.8}px,${-y * 0.9}px,0px`
-                layer6.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.5}px,0px`
-                layer7.style.transform = `translate3d(${-x * 0.5}px,${-y * 0.3}px,0px`
-                // }
+                if (y < 90) {
+                  layer1.style.transform = `translate3d(${-x * 1.5}px,${-y * 1.2}px,0px`
+                  layer2.style.transform = `translate3d(${-x * 1.3}px,${-y * 1.1}px,0px`
+                  layer3.style.transform = `translate3d(${-x * 1.2}px,${-y * 1.05}px,0px`
+                  layer4.style.transform = `translate3d(${-x * 1.04}px,${-y * 1.02}px,0px`
+                  layer5.style.transform = `translate3d(${-x * 0.8}px,${-y * 0.9}px,0px`
+                  layer6.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.5}px,0px`
+                  layer7.style.transform = `translate3d(${-x * 0.5}px,${-y * 0.3}px,0px`
+                }
               })
             }
           })
