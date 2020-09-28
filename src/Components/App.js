@@ -54,7 +54,7 @@ function App() {
               window.addEventListener("deviceorientation", (e) => {
                 const gamma = Math.floor(e.gamma)
                 const beta = Math.floor(e.beta)
-                const alpha = Math.floor(e.alpha)
+                // const alpha = Math.floor(e.alpha)
                 // setX(gamma)
                 // setY(beta)
                 // setZ(alpha)
