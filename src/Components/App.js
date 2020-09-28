@@ -56,13 +56,13 @@ function App() {
                 // setX(x)
                 // setY(y)
                 // if (y > 0 && y < 90) {
-                layer1.style.transform = `translate3d(${-x * 1.75}px,${-y * 1.24}px,0px`
-                layer2.style.transform = `translate3d(${-x * 1.6}px,${-y * 1.24}px,0px`
-                layer3.style.transform = `translate3d(${-x * 1.3}px,${-y * 1.15}px,0px`
-                layer4.style.transform = `translate3d(${-x * 1.24}px,${-y * 1.12}px,0px`
-                layer5.style.transform = `translate3d(${-x * 1.27}px,${-y * 1.09}px,0px`
-                layer6.style.transform = `translate3d(${-x * 1.12}px,${-y * 1.06}px,0px`
-                layer7.style.transform = `translate3d(${-x * 1.09}px,${-y * 1.03}px,0px`
+                layer1.style.transform = `translate3d(${-x * 1.5}px,${-y * 1.2}px,0px`
+                layer2.style.transform = `translate3d(${-x * 1.3}px,${-y * 1.1}px,0px`
+                layer3.style.transform = `translate3d(${-x * 1.2}px,${-y * 1.05}px,0px`
+                layer4.style.transform = `translate3d(${-x * 1.04}px,${-y * 1.02}px,0px`
+                layer5.style.transform = `translate3d(${-x * 0.8}px,${-y * 0.9}px,0px`
+                layer6.style.transform = `translate3d(${-x * 0.6}px,${-y * 0.5}px,0px`
+                layer7.style.transform = `translate3d(${-x * 0.5}px,${-y * 0.3}px,0px`
                 // }
               })
             }
