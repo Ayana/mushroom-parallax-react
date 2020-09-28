@@ -176,6 +176,7 @@ html {
     background-size: cover;
     width: 120%;
     height: 110%;
+    height: calc(var(--vh, 1vh) * 110);
     left: -10%;
     top: -10%;
   }

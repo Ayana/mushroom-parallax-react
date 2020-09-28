@@ -6,7 +6,6 @@ export default () => {
     <div className="application">
       <Helmet>
         <meta charSet="utf-8" />
-        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
       </Helmet>
     </div>
   )
