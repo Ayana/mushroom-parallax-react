@@ -76,13 +76,13 @@ function App() {
                   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
                 } else {
-                  layer1.style.transform = `translateY(${-beta * 1.2}px)`
-                  layer2.style.transform = `translateY(${-beta * 1.1}px)`
-                  layer3.style.transform = `translateY(${-beta * 1.05}px)`
-                  layer4.style.transform = `translateY(${-beta * 1.02}px)`
-                  layer5.style.transform = `translateY(${-beta * 0.9}px)`
-                  layer6.style.transform = `translateY(${-beta * 0.5}px)`
-                  layer7.style.transform = `translateY(${-beta * 0.3}px)`
+                  // layer1.style.transform = `translateY(${-beta * 1.2}px)`
+                  // layer2.style.transform = `translateY(${-beta * 1.1}px)`
+                  // layer3.style.transform = `translateY(${-beta * 1.05}px)`
+                  // layer4.style.transform = `translateY(${-beta * 1.02}px)`
+                  // layer5.style.transform = `translateY(${-beta * 0.9}px)`
+                  // layer6.style.transform = `translateY(${-beta * 0.5}px)`
+                  // layer7.style.transform = `translateY(${-beta * 0.3}px)`
                 }
               })
             }
