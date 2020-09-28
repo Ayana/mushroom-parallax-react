@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import "../assets/styles/App.scss"
 
 function App() {
@@ -26,9 +26,9 @@ function App() {
     }
   })
 
-  const [x, setX] = useState("null")
-  const [y, setY] = useState("null")
-  const [z, setZ] = useState("null")
+  // const [x, setX] = useState("null")
+  // const [y, setY] = useState("null")
+  // const [z, setZ] = useState("null")
   useEffect(() => {
     const centerX = window.innerWidth / 2
     const centerY = window.innerWidth / 2
@@ -55,17 +55,9 @@ function App() {
                 const gamma = Math.floor(e.gamma)
                 const beta = Math.floor(e.beta)
                 const alpha = Math.floor(e.alpha)
-                setX(gamma)
-                setY(beta)
-                setZ(alpha)
-
-                // layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
-                // layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
-                // layer3.style.transform = `translate3d(${-gamma * 1.2}px,${-beta * 1.05}px,0px)`
-                // layer4.style.transform = `translate3d(${-gamma * 1.04}px,${-beta * 1.02}px,0px)`
-                // layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
-                // layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
-                // layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
+                // setX(gamma)
+                // setY(beta)
+                // setZ(alpha)
 
                 if (beta > -80 && beta < 80) {
                   layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
@@ -75,14 +67,6 @@ function App() {
                   layer5.style.transform = `translate3d(${-gamma * 0.8}px,${-beta * 0.9}px,0px)`
                   layer6.style.transform = `translate3d(${-gamma * 0.6}px,${-beta * 0.5}px,0px)`
                   layer7.style.transform = `translate3d(${-gamma * 0.5}px,${-beta * 0.3}px,0px)`
-                } else {
-                  // layer1.style.transform = `translateY(${-beta * 1.2}px)`
-                  // layer2.style.transform = `translateY(${-beta * 1.1}px)`
-                  // layer3.style.transform = `translateY(${-beta * 1.05}px)`
-                  // layer4.style.transform = `translateY(${-beta * 1.02}px)`
-                  // layer5.style.transform = `translateY(${-beta * 0.9}px)`
-                  // layer6.style.transform = `translateY(${-beta * 0.5}px)`
-                  // layer7.style.transform = `translateY(${-beta * 0.3}px)`
                 }
               })
             }
@@ -110,9 +94,9 @@ function App() {
   return (
     <>
       <button className="button">CLICK TO SHOW</button>
-      <div className="note">
+      {/* <div className="note">
         gamma:{x} / beta:{y} / z:{z}
-      </div>
+      </div> */}
       <div className="parallax-container">
         <div className="parallax-layer layer7"></div>
         <div className="parallax-layer layer6"></div>
