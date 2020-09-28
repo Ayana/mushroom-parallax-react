@@ -86,9 +86,10 @@ html {
     left: -25%;
     bottom: -23%;
     @include medium {
-      width: 120%;
+      width: 140%;
       height: 50%;
-      bottom: -18%;
+      left: -10%;
+      bottom: -23%;
     }
   }
   .layer2 {
@@ -158,6 +159,10 @@ html {
     left: -15%;
     bottom: -3%;
     right: 0;
+    @include medium {
+      height: 45%;
+      bottom: -3%;
+    }
   }
   .layer7 {
     background-image: url(../images/layer7.png);

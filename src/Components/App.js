@@ -1,7 +1,12 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import "../assets/styles/App.scss"
 
 function App() {
+  const centerX = window.innerWidth / 2
+  const centerY = window.innerHeight / 2
+  const [radiusX, setRadiusX] = useState(centerX)
+  const [radiusY, setRadiusY] = useState(centerY)
+
   useEffect(() => {
     // Get correct height function with clearTimeout to prevent too many requests
     const vh = window.innerHeight * 0.01
@@ -17,7 +22,10 @@ function App() {
           const vh = window.innerHeight * 0.01
           document.documentElement.style.setProperty("--vh", `${vh}px`)
         }
-      }, 500)
+
+        setRadiusX(window.innerWidth / 2)
+        setRadiusY(window.innerHeight / 2)
+      }, 1000)
     }
     window.addEventListener("resize", resizeListener)
 
@@ -26,12 +34,7 @@ function App() {
     }
   })
 
-  // const [x, setX] = useState("null")
-  // const [y, setY] = useState("null")
-  // const [z, setZ] = useState("null")
   useEffect(() => {
-    const centerX = window.innerWidth / 2
-    const centerY = window.innerWidth / 2
     const button = document.querySelector(".button")
     const container = document.querySelector(".parallax-container")
     const layer1 = document.querySelector(".layer1")
@@ -54,10 +57,6 @@ function App() {
               window.addEventListener("deviceorientation", (e) => {
                 const gamma = Math.floor(e.gamma)
                 const beta = Math.floor(e.beta)
-                // const alpha = Math.floor(e.alpha)
-                // setX(gamma)
-                // setY(beta)
-                // setZ(alpha)
 
                 if (beta > -80 && beta < 80) {
                   layer1.style.transform = `translate3d(${-gamma * 1.4}px,${-beta * 1.2}px,0px)`
@@ -76,9 +75,10 @@ function App() {
         button.style.display = "none"
         container.style.display = "block"
         // handle regular non iOS 13+ devices
+
         document.body.addEventListener("mousemove", (e) => {
-          const x = e.clientX - centerX
-          const y = e.clientY - centerY
+          const x = e.clientX - radiusX
+          const y = e.clientY - radiusY
           layer1.style.transform = `translate3d(${-x * 0.25}px,${-y * 0.08}px,0px`
           layer2.style.transform = `translate3d(${-x * 0.18}px,${-y * 0.06}px,0px`
           layer3.style.transform = `translate3d(${-x * 0.1}px,${-y * 0.05}px,0px`
