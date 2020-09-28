@@ -56,7 +56,7 @@ function App() {
                 const beta = Math.floor(e.beta)
                 setX(gamma)
                 setY(beta)
-                if (beta > 0 && beta < 90) {
+                if (beta > -70 && beta < 70) {
                   setZ("<90")
                   layer1.style.transform = `translate3d(${-gamma * 1.5}px,${-beta * 1.2}px,0px)`
                   layer2.style.transform = `translate3d(${-gamma * 1.3}px,${-beta * 1.1}px,0px)`
